@@ -1,12 +1,12 @@
 :root {
-    --ipod-color: rgb(236, 236, 236);
+    --ipod-color: rgb(214, 214, 214);
 }
 
 .ipod {
     width: 200px;
     height: 300px;
     background-color: var(--ipod-color);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
     border-radius: 30px;
     display: flex;
     flex-direction: column; 
@@ -53,6 +53,10 @@
     position: absolute;
 }
 
+.buttons img:hover, .buttons button:hover {
+    cursor: pointer;
+}
+
 .buttons img {
     width: 15px;
 }
@@ -62,7 +66,7 @@
     font-size: xx-small;
     font-weight: 700;
     position: relative;
-    left: 45px;
+    left: 43px;
     top: 8px;
     background-color: transparent;
 }
