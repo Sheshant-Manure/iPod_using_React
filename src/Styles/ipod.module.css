@@ -62,30 +62,30 @@
     width: 15px;
 }
 
-.buttons button {
+.menu {
     border: none;
     font-size: xx-small;
     font-weight: 700;
     position: relative;
-    left: 43px;
-    top: 8px;
+    left: 49px;
+    top: 12px;
     background-color: transparent;
 }
 
 .playpause {
     position: relative;
-    top: 93px;
-    left: 23px;
+    top: 91px;
+    left: 35px;
 }
 
 .backward {
     position: relative;
-    top: 50px;
-    left: -33px;
+    top: 51px;
+    left: -20px;
 }
 
 .forward {
     position: relative;
-    top: 50px;
-    right: -33px;
+    top: 51px;
+    right: -43px;
 }
