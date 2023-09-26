@@ -21,6 +21,8 @@
     margin-top: 20px;
     border: 2px solid black;
     border-radius: 5px;
+    background-image: url('https://plus.unsplash.com/premium_photo-1673697239984-b089baf7b6e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww&w=1000&q=80');
+    background-size: cover;    
 }
 
 .ipodcontrollerbox {
@@ -88,4 +90,29 @@
     position: relative;
     top: 51px;
     right: -43px;
+}
+
+.screenmenu {
+    background-color: white;
+    width: 45%;
+    height: 100%;
+}
+
+.screenmenu ul {
+    list-style-type: none;
+}
+
+.screenmenu ul li {
+    padding: 8px 6px;
+    text-align: center;
+}
+
+.screenmenu ul li:hover {
+    background: var(--ipod-color);
+    cursor: pointer;
+}
+
+.screenmenu h3 {
+    text-align: center;
+    padding: 5px;
 }
