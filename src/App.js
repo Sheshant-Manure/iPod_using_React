@@ -1,6 +1,7 @@
+import Ipod from './Components/Ipod'
 function App() {
   return (
-    <></>
+    <Ipod />
   );
 }
 
