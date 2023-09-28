@@ -107,7 +107,7 @@
     text-align: center;
 }
 
-.screenmenu ul li:hover {
+.screenmenu ul li:hover, .itemactive {
     background: var(--ipod-color);
     cursor: pointer;
 }

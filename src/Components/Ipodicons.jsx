@@ -1,4 +1,4 @@
-import { icons } from "../Icondata/Icondata";
+import { icons } from '../Data/Icondata';
 import styles from '../Styles/ipod.module.css';
 import audio from "../Audio/buttonclick.mp3";
 import { useReducer } from "react";
@@ -6,7 +6,7 @@ import { useValue } from "../context";
 
 export const Ipodicons = () => {
     
-    const { showMenu, setShowMenu } = useValue();
+    const { showMenu, setShowMenu, activeItem, setActiveItem } = useValue();
 
    const playaudio=()=>{
     const clickSound = new Audio(audio);
@@ -15,22 +15,23 @@ export const Ipodicons = () => {
 
   const reducer = (state, action) => {
     switch (action.type){
-        // Menu toggle
-        case 1:                    
+        case 1: // Menu button                 
             const displayMenu = () => {
                 setShowMenu(!showMenu);
             }     
             displayMenu();
-            console.log(action.payload, showMenu);
             return;
-        case 2:
-            console.log(action.payload);
+        case 2: // playpause button
+        if (showMenu) {
+          if(activeItem === 2)
+            setActiveItem(0);
+          else
+            setActiveItem(activeItem+1);
+        }
             return;
-        case 3:
-            console.log(action.payload);
+        case 3:  // Backward button
             return;
-        case 4:
-            console.log(action.payload);
+        case 4:   // Forward button
             return;
         default:
             return state;

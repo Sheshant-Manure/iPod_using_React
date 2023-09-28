@@ -7,8 +7,9 @@ export const useValue = () => {
 
 const ScreenContext = ({children}) => {
     const [showMenu, setShowMenu] = useState(false);
+    const [activeItem, setActiveItem] = useState(0);
     return (
-        <screenContext.Provider value={ { showMenu, setShowMenu } }>
+        <screenContext.Provider value={ { showMenu, setShowMenu, activeItem, setActiveItem } }>
             {children}
         </screenContext.Provider>
     );
