@@ -50,6 +50,7 @@ export const Ipodicons = () => {
         return (
           <img key={icon.id} className={`${styles[icon.alt]}`} src={icon.src} alt={icon.alt}  
             onClick={ () => { handleClick(icon.id, icon.alt) }}
+            draggable="false"   // This property along with user-select: none; for the page BODY disables any unncessary select and highlighting
           />
         );
       })}
