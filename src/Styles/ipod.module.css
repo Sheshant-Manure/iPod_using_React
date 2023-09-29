@@ -50,6 +50,7 @@
     height: 40%;
     transform: translate(75%, 75%);
     background-color: var(--ipod-color);
+    cursor: pointer;
 }
 
 .buttons {

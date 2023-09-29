@@ -3,8 +3,8 @@ import { useValue } from "../context";
 import styles from '../Styles/ipod.module.css';
 
 const Menu = () => {
-    const { showMenu, activeItem, setActiveItem } = useValue();
-    if(showMenu) 
+    const { activeItem, setShowMenuItem } = useValue(); 
+        setShowMenuItem(false);
         return (
         <div className={styles.screenmenu}>
             <h3>iPod.js</h3>
