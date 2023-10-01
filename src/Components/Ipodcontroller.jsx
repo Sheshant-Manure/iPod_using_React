@@ -12,7 +12,7 @@ const playaudio=()=>{
 
 export const Ipodcontroller = () => {
     
-    const { showMenu, setShowMenu, setShowMenuItem } = useValue();
+    const { showMenu, setShowMenu, setShowMenuItem, setActiveItem } = useValue();
 
     const displayMenuItem = () => {
         playaudio();
@@ -22,8 +22,26 @@ export const Ipodcontroller = () => {
         }
     }
 
+    let angles = []
     const handleRotate = (e) => {
-        console.log(e.detail.angle);
+        angles.push(e.detail.angle);
+        let relative_angle = e.detail.angle - angles[0];
+
+        // Navigation for Positive angles
+        if ( relative_angle >= 0 && relative_angle < 120 )
+            setActiveItem(0);
+        else if ( relative_angle >= 120 && relative_angle < 240 )
+            setActiveItem(1);
+        else if ( relative_angle >= 240 && relative_angle < 360 )
+            setActiveItem(2);
+
+        // Navigation for Negative angles
+        if ( relative_angle < 0 && relative_angle > -120 )
+            setActiveItem(2)
+        else if ( relative_angle <=-120 && relative_angle >-240 )
+            setActiveItem(1)
+        else if ( relative_angle <=-240 && relative_angle >-360 )
+            setActiveItem(0)
     };
 
     const targetRef = useRef(null);
@@ -33,7 +51,7 @@ export const Ipodcontroller = () => {
             const region = new ZingTouch.Region(targetRef.current);
             region.bind(targetRef.current, 'rotate', handleRotate);
         }
-    }, []);
+    });
 
     return (
             <div className={styles.ipodcontrollerbox}>
