@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/iPod_using_React/static/css/main.0a8b29be.css",
+    "main.js": "/iPod_using_React/static/js/main.13d919cd.js",
+    "static/media/buttonclick.mp3": "/iPod_using_React/static/media/buttonclick.739ff965449458bda359.mp3",
+    "index.html": "/iPod_using_React/index.html",
+    "main.0a8b29be.css.map": "/iPod_using_React/static/css/main.0a8b29be.css.map",
+    "main.13d919cd.js.map": "/iPod_using_React/static/js/main.13d919cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a8b29be.css",
+    "static/js/main.13d919cd.js"
+  ]
+}
